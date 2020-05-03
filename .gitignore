@@ -1,0 +1,5 @@
+.idea
+settings.xml
+xTalisman.iml
+# Project exclude paths
+/target/

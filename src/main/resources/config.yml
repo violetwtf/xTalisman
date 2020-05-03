@@ -1,0 +1,50 @@
+# name = the actual name of the item, e.g. '&bMythical &fTalisman'
+message-on-receive: '&aYou have received a {name}*a!'
+message-on-charged: '&aYour {name}&a is fully charged! Right click it to claim a reward'
+# name = reward name
+reward-on-receive: '&aReward gained:&f {name}'
+# For this example, I will use the Mythical Talisman shown in example screenshots above.
+
+mythical: # the internal name, used when giving an item via command.
+  display-name: 'Mythical' #the name used to refer to the item
+  colour: 'light_purple' #the colour code used for the current exp loreline, the charged line, and the item name.
+  exp-required: 5000 # Required exp.
+  rewards: # rewards should use a weighting system. One reward should be granted per talisman.
+    1:
+      type: command # Type can be item or command. Command should be ran through console.
+      weight: 50
+      command: 'say hi {name}' # Where name is the player receiving;
+      name: 'Super Cool Reward'
+    2:
+      type: item
+      weight: 50
+      item: 'MOB_SPAWNER' # item (required)
+      amount: 1 # item amount (required)
+      durability: 50 # item data. (optional. If null, defaults to 0)
+      item-name: '&dCreeper &7Spawner' #Item displayname. Also can be optional.
+      name: 'Even Cooler Reward'
+      lore: #Item lore. Can be optional.
+        - 'loreline1'
+        - 'loreline2'
+
+elysian: # the internal name, used when giving an item via command.
+  display-name: 'Elysian' #the name used to refer to the item
+  colour: 'dark_aqua' #the colour code used for the current exp loreline, the charged line, and the item name.
+  exp-required: 3000 # Required exp.
+  rewards: # rewards should use a weighting system. One reward should be granted per talisman.
+    1:
+      type: command # Type can be item or command. Command should be ran through console.
+      weight: 50
+      command: 'say hi {name}' # Where name is the player receiving;
+      name: 'Super Cool Reward 2'
+    2:
+      type: item
+      weight: 50
+      item: 'MOB_SPAWNER' # item (required)
+      amount: 1 # item amount (required)
+      durability: 50 # item data. (optional. If null, defaults to 0)
+      item-name: '&dCreeper &7Spawner' #Item displayname. Also can be optional.
+      name: 'Even Cooler Reward'
+      lore: #Item lore. Can be optional.
+        - 'loreline  1'
+        - 'loreline2'

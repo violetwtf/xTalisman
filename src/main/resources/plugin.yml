@@ -1,0 +1,13 @@
+name: xTalisman
+version: ${project.version}
+main: wtf.violet.xtalisman.XTalisman
+api-version: 1.13
+authors: [Violet "violetwtf" M.]
+description: [redacted] Talisman system
+website: https://[redacted]
+depend: [NBTAPI]
+commands:
+  xtdebug:
+    description: "Debug xTalisman"
+  talisman:
+    description: "Manage xTalsiman"
